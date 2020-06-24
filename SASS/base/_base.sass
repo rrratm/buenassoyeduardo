@@ -1,0 +1,59 @@
+*
+	box-sizing: border-box
+
+body
+	background-color: $color-fondo
+	color: $color-texto
+	font-family: 'Heebo', serif
+
+div
+	+mar-pad(0, 0)
+
+.img
+	display: block
+	width: 350px
+	border-radius: 9px
+	+mar-pad(0,0)
+	&:hover
+		cursor: pointer
+
+p
+	+mar-pad(0,0 0 7px)
+	font-weight: 200
+	font-size: 1rem
+
+br
+	+mar-pad(0,0)
+
+h3
+	font-size: 1.05rem
+	font-family: 'Heebo', serif
+	letter-spacing: 1px
+	+mar-pad(0 0 7px,0 0 7px)
+
+h4
+	font-size: 1.03rem
+	font-family: 'Heebo', serif
+	letter-spacing: 0.5px
+	+mar-pad(0 0 7px,0 0 7px)
+
+button
+	border-radius: 4px
+	border: 0
+	font-family: 'Nunito', serif
+	font-weight: 500
+	&:hover
+		cursor: pointer
+
+.span-nombre-importante
+	font-family: 'Nunito', serif
+	font-weight: 600
+
+a
+	text-decoration: none
+	color: inherit
+	&:hover
+		cursor: pointer
+	&:visited
+		text-decoration: none
+	

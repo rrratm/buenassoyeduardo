@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Buenas, soy Eduardo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Novelas y audiolibros de las aventuras de la serie Buenas soy Eduardo, la mejor saga que vio la Argentina desde 1990 según el New York Times.">
+	<meta name="keywords" content="buenas soy eduardo, hualixto, badabumberos, heliantua, eduardo forbes, eduardo, forbes, literatura, literatura argentina, novela argentina, literatura humor, dragon ball, literatura millenial">
+	<meta name="author" content="Rafael Nunez R, Rafael Nuñez R">
+	<link href="CSS/buenassoyeduardo.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+	<link rel="icon" href="Imagenes/BSE32.png">
+</head>
+
+<body>
+	<div id="boton-comprar" onclick="abrirComprar();">
+		<p class="quiero-comprar">¡lo quiero<br>comprar!</p>
+	</div>
+	<div id="comprar-contenedor">
+		<div class="comprar-panel">
+			<div class="cerrar-panel" onclick="cerrarComprar();">—</div>
+			<div class="comprar-panel-bis">
+				<div class="comprar-columnas">
+					<div class="columna1-comprar">
+						<div class="portadas-chiquitas">
+							<img class="img-miniaturas" src="Imagenes/Hualixto%20W.jpg">
+							<img class="img-miniaturas" src="Imagenes/Badabumberos%20WEB.jpg">
+							<img class="img-miniaturas" src="Imagenes/Heliantua%20WEB.jpg">
+						</div>
+						<div class="comprar-textos">
+							<p>Si hiciste click acá es porque lo que leíste (o escuchaste) te gustó, lo cual me pone contento. Los libros de <span class="span-nombre-importante">buenas soy Eduardo</span> (que van a ser diez) no existen todavía en papel, pero podés ayudarme:</p>
+							<p>¿Te ves con los libros en tus manos, riéndote en la cocina o el inodoro? Entonces llená el <span class="span-nombre-importante">formulario</span> acá al lado, así tengo una idea real de la demanda.</p>
+							<p>Lo otro, vital para todo proyecto, es ayudar a <span class="span-nombre-importante">difundir</span>: seguíme por <a class="comp-a" href="https://www.facebook.com/Buenas-soy-Eduardo-102414251516745" target="_blank"><span class="span-nombre-importante">Facebook</span></a>, <a class="comp-a" href="https://www.instagram.com/buenassoyeduardo/" target="_blank"><span class="span-nombre-importante">Instagram</span></a> y/o <a class="comp-a" href="https://twitter.com/buenasoyeduardo" target="_blank"><span class="span-nombre-importante">Twitter</span></a>, mandáme mensajes o dudas y compartí. Si los lectores no pasan la bola, no hay publicidad que aguante.</p>
+							<p>Por último, no te olvides de dejarme <span class="span-nombre-importante">tu opinión</span> si te coparon los libros. Poné tu mail real y el día que lo saque a la venta te mando un <span class="span-nombre-importante">código de descuento</span>, ¡prometido!</p>
+							<p>(¿Sos millonario y querés financiarme? Ignorá todo eso, contactáme ya mismo.)</p>
+						</div>
+					</div>
+					<div class="columna2-comprar">
+						<div class="comprar-textos">
+							<form class="form-comprar" action="PHP/enviar-comprar.php" method="post" enctype="text/plain">
+								<p>Todo lo que hay acá es gratis porque quiero que llegue a la mayor cantidad de gente posible, ¿pero quién no querría tener la colección completa en un estante?</p>
+								<h4>Anotáte en la lista de espera</h4>
+								<input type="text" name="compNombre" placeholder="¿cómo te llamás?" />
+								<br>
+								<input type="email" name="compEmail" placeholder="tu email" />
+								<br>
+								<input type="text" name="compPais" placeholder="de qué país sos" />
+								<br>
+								<input type="checkbox" name="compCheck1" id="compCheck1" checked /><label for="compCheck1" checked>¡Avisáme cuando esté listo!</label>
+								<br>
+								<input type="checkbox" name="compCheck2" id="compCheck2" /><label for="compCheck2">Quiero pagar por adelantado.</label>
+								<br>
+								<input class="enviar-comprar" id="enviar-comprar" type="submit" value="enviar">
+								<!-- <p> <php? echo $result; /> </p> -->
+							</form>
+							<br>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="meta">
+					<div class="meta-ok"></div>
+					<div class="meta-nook">¡Faltan 499 interesados!</div>
+				</div>
+				<div class="comprar-textos-pie">
+					<p>Apenas llegue a 500 compradores, ¡consigo imprenta y a imprimir! Hasta hoy sólo hay una persona en la lista: mi hermana. Así que media pila.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="libro-principal">
+		<section class="hualixto-principal">
+			<div class="libro-cerrado" id="hualixto-cerrado">
+				<img class="img banner" src="Imagenes/Hualixto%20banner.jpg" onclick="abrirHualixto();">
+			</div>
+			<div class="libro-abierto" id="hualixto-abierto">
+				<div class="columna1">
+					<div class="portada-contenedor">
+						<img class="img portada" src="Imagenes/Hualixto%20W.jpg" onclick="cerrarHualixto();">
+						<div class="botones-contenedor">
+							<ul class="botonera">
+								<li><button class="hualixto-boton" onclick="verTexto1Hualixto()"><a href="javascript:void(0);">info</a></button></li>
+								<li><button class="hualixto-boton" onclick="verTexto2Hualixto()"><a href="javascript:void(0);">opinión</a></button></li>
+								<li><button class="hualixto-boton" onclick="verTexto3Hualixto()"><a href="javascript:void(0);">audiolibro</a></button></li>
+								<li><button class="hualixto-boton" onclick="verTexto4Hualixto()"><a href="javascript:void(0);">ebook</a></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="columna2">
+					<div class="textos-contenedor">
+						<div class="texto1" id="id-texto1-hualixto">
+							<div class="hualixto-resumen">
+								<p>Buenas, soy <span class="span-nombre-importante">Eduardo</span>, el de la tapa. Y también el que cuenta la historia, y el que armó la web, y el pelotudo que escribe las sinopsis, obviamente.</p>
+								<p>Arranquemos por lo básico así después no me vienen con demandan injustificadas: acá en <span class="span-nombre-importante">Hualixto</span> yo tenía seis años pero ahora soy un boludón grande como cualquiera, así que ojito: nenes acá no eh.</p>
+								<p>Como te decía, yo tenía seis años, era el 97, todavía existía Magic Kids y lo único que me importaba era no perderme Dragon Ball y hacer que Luz, la nena más linda de todo Tandil, gustara de mí. Y me propuse hacerlo con un CD ROM mágico que me prestó mi amigo Nico, lo cual fue, de entrada, una metida de pata grande como una casa.</p>
+							</div>
+						</div>
+
+						<div class="texto2" id="id-texto2-hualixto">
+							<div class="hualixto-opinion">
+								<div class="opiniones-display">
+									<div class="opinion1 fade">
+										<h3>- Si creciste cuando "el barrio" todavía era un lugar feliz, ¡lo tenés que leer!</h3>
+										<p>«Es un libro genial reflejando las aventuras de crecer en "el barrio", cuando todavía se podía jugar a la pelota en la calle y salir de bici, el primer amor de colegio y la creatividad que la falta de televisión por cable nos regaló de chicos. Me regaló más de una sonrisa, una carcajada y un puñado de recuerdos!»</p>
+										<p class="opinion-firma">Aníbal, lector real</p>
+									</div>
+									<div class="opinion1 fade">
+										<h3>- ¡El nuevo Martín Fierro, el nuevo Harry Potter, el nuevo Jack Reacher ha llegado al país!</h3>
+										<p>«Considero que <span class="span-nombre-importante">Hualixto</span> es la primera obra en la narración argentina contemporánea de ficción que, con un vocabulario accesible y coloquial y constante humor se aproxima a las temáticas que realmente importan en la sociedad actual, como rememorar la épica paliza que le dio Gokú a Nappa después de que el enano de Chaos se sacrificara al pedo, y ese tipo de cosas...»</p>
+										<p class="opinion-firma">Rafa, el autor</p>
+									</div>
+									<div class="opinion1 fade">
+										<h3>No hay suficientes lectores como para mostrar opiniones verdaderas, ¡copáte y dejá la tuya!</h3>
+										<p>Como sugerencia siempre te recuerdo ser buena onda y no bardearla. Dame amor, dale.</p>
+									</div>
+								</div>
+								<br>
+								<div class="opinion-puntitos">
+									<a class="opinion-anterior" onclick="plusSlides(-1, 0)">&#10094;</a>
+									<a class="opinion-siguiente" onclick="plusSlides(1, 0)">&#10095;</a>
+								</div>
+							</div>
+							<br>
+							<div class="opinion-form-contenedor">
+								<form class="formulario-opinion">
+									<h3>Dejáme tu comentario</h3>
+									<input class="formulario-nombre" type="text" name="nombre" placeholder="tu nombre">
+									<br>
+									<input class="formulario-email" type="email" name="email" placeholder="tu email, juro no mandar spam">
+									<br>
+									<textarea class="formulario-dejar-opinion" name="opinion-lector" placeholder="decime cuánto te gustó" maxlength="500"></textarea>
+									<br>
+									<input class="enviar-opinion" type="submit" value="enviar">
+								</form>
+							</div>
+						</div>
+
+						<div class="texto3" id="id-texto3-hualixto">
+							<div class="hualixto-audiolibro">
+								<p>Dentro de muy poco tiempo voy a ir subiendo los capítulos del audiolibro, así que si no querés perderte ni uno, seguíme por <a class="comp-a" href="https://www.facebook.com/Buenas-soy-Eduardo-102414251516745" target="_blank"><span class="span-nombre-importante">Facebook</span></a>, <a class="comp-a" href="https://www.instagram.com/buenassoyeduardo/" target="_blank"><span class="span-nombre-importante">Instagram</span></a> y/o <a class="comp-a" href="https://twitter.com/buenasoyeduardo" target="_blank"><span class="span-nombre-importante">Twitter</span></a> así te enterás!</p>
+							</div>
+						</div>
+
+						<div class="texto4" id="id-texto4-hualixto">
+							<div class="hualixto-ebook">
+								<h4>Hay ebooks para todos, leé atenti y fijáte cuál te gusta más. Es todo gratis así que si le pifiás, no te preocupes.</h4>
+								<ul class="ul-opciones-ebook">
+									<li><a href="https://issuu.com/buenassoyeduardo/docs/hualixto" target="_blank"><button class="descargar-ebook"><i class="fas fa-laptop"></i></button></a>
+										<p>Esta es para los que quieren leer desde su computadora o tablet y tienen miedo a descargarse un virus.</p>
+									</li>
+									<li><a href="hualixto/Hualixto%20-%20Rafael%20Nu%C3%B1ez%20R.pdf" download><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button></a>
+										<p>Esto es lo mismo, pero te lo descargás y listo. No, no tiene virus.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-mobile-alt"></i></button>
+										<p>Esta opción es para los que quieren leerlo online desde su celular.</p>
+									</li>
+									<li><a href="hualixto/Hualixto%20(para%20celular)%20Rafael%20Nu%C3%B1ez%20R.pdf" download><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button></a>
+										<p>Este es un simple .pdf adaptado a pantallas de celulares y dispositivos chiquitos.</p>
+									</li>
+									<li><a href="hualixto/Hualixto%20-%20Rafael%20Nunez%20R.epub" download><button class="descargar-ebook"><i class="fas fa-tablet-alt"></i></button></a>
+										<p>Este es para los que tienen e-readers que NO son Kindle, onda un Kobo.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fab fa-amazon"></i></button>
+										<p>Este te conviene si caíste en manos de Jeff Bezzos y tenés un Kindle.</p>
+									</li>
+									<li><a href="hualixto/Hualixto%20-%20Rafael%20Nu%C3%B1ez%20R.txt" download><button class="descargar-ebook"><i class="far fa-file-alt"></i></button></a>
+										<p>Este es un .txt, para gente rara. Onda no sé quién puede querer esto, pero soy re copado y lo pongo igual.</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="badabum-principal">
+			<div class="libro-cerrado" id="badabum-cerrado">
+				<img class="img banner" src="Imagenes/Badabumberos%20banner.jpg" onclick="abrirBadabum();">
+			</div>
+			<div class="libro-abierto" id="badabum-abierto">
+				<div class="columna1">
+					<div class="portada-contenedor">
+						<img class="img portada" src="Imagenes/Badabumberos%20WEB%20PROX.jpg" onclick="cerrarBadabum();">
+						<div class="botones-contenedor">
+							<ul class="botonera">
+								<li><button class="badabum-boton" onclick="verTexto1Badabum()"><a href="javascript:void(0);">info</a></button></li>
+								<li><button class="badabum-boton" onclick="verTexto2Badabum()"><a href="javascript:void(0);">opinión</a></button></li>
+								<li><button class="badabum-boton" onclick="verTexto3Badabum()"><a href="javascript:void(0);">audiolibro</a></button></li>
+								<li><button class="badabum-boton" onclick="verTexto4Badabum()"><a href="javascript:void(0);">ebook</a></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="columna2">
+					<div class="textos-contenedor">
+
+						<div class="texto1" id="id-texto1-badabum">
+							<div class="badabum-resumen">
+								<p>Buenas, soy <span class="span-nombre-importante">Eduardo</span>, el pibe de la tapa. Lo cabezón es porque tenía ocho años y la vaca muerta (eso que tengo ahí atrás) es porque don Juldain cayó con una así, en medio del campamento de verano, igualita.</p>
+								<p>Ya lo dije en Hualixto pero lo repito por las dudas: <span class="span-nombre-importante">Badabumberos</span> no es apta para menores de quince años... catorce, dieciséis, qué sé yo.</p>
+								<p>Para ponerte en situación, esto pasó cuando se terminaba el milenio y había julepe con lo del fin del mundo. Pero para mí la gran hecatombe había empezado unos meses antes, cuando nos metieron de suplente a una vieja chota porque la seño Ceci había tenido un accidente raro y estaba en coma. Digo raro porque, entre otras cosas, su auto había desaparecido...</p>
+							</div>
+						</div>
+
+						<div class="texto2" id="id-texto2-badabum">
+							<div class="badabum-opinion">
+								<div class="opiniones-display">
+									<div class="opinion2 fade">
+										<h3>- Increíble relato de cómo fue realmente el fin del milenio!</h3>
+										<p>«En Badabumberos se puede ver cómo va madurando Eduardo desde Hualixto y cómo se va volviendo un hijo de puta. Más allá de eso, me divertí mucho con la historia y me trajo nostalgia de Dragon Ball y los dinovo. ¿Por qué no existen más los dinovo che?»</p>
+										<p class="opinion-firma">Nadie, porque nadie me quiere</p>
+									</div>
+									<div class="opinion2 fade">
+										<h3>- El nuevo Martín Fierro, el nuevo Harry Potter, el nuevo Jack Reacher ha llegado al país!</h3>
+										<p>«Considero que <span class="span-nombre-importante">Badabumberos</span> es la segunda obra en la narración argentina contemporánea de ficción que, con un vocabulario accesible y coloquial y constante humor se aproxima a las temáticas que realmente importan en la sociedad actual, como las batallas de cartas Pókemon y ese tipo de cosas...»</p>
+										<p class="opinion-firma">Rafa, el autor</p>
+									</div>
+									<div class="opinion2 fade">
+										<h3>No hay suficientes lectores como para mostrar opiniones verdaderas, copate y, apenas salga el libro, ¡dejá la tuya!</h3>
+										<p>Como sugerencia siempre recordamos ser buena onda y no bardearla. Dame amor, dale.</p>
+										<!--<p class="opinion-firma">Rafa, el autor</p>-->
+									</div>
+								</div>
+								<br>
+								<div class="opinion-puntitos">
+									<a class="opinion-anterior" onclick="plusSlides(-1, 1)">&#10094;</a>
+									<a class="opinion-siguiente" onclick="plusSlides(1, 1)">&#10095;</a>
+								</div>
+								<br>
+								<!---
+								<div class="opinion-form-contenedor">
+									<form class="formulario-opinion">
+										<h3>Dejame tu comentario</h3>
+										<input class="formulario-nombre" type="text" name="nombre" placeholder="tu nombre">
+										<br>
+										<input class="formulario-email" type="email" name="email" placeholder="tu email, juro no mandar spam">
+										<br>
+										<textarea class="formulario-dejar-opinion" name="opinion-lector" placeholder="decime cuánto te gustó" maxlength="500"></textarea>
+										<br>
+										<input class="enviar-opinion" type="submit" value="enviar">
+									</form>
+								</div>
+								--->
+							</div>
+						</div>
+
+						<div class="texto3" id="id-texto3-badabum">
+							<div class="badabum-audiolibro">
+								<p>Badabumberos está en los últimos procesos de corrección. Cuando quede pipí cucú voy a ir grabando los capítulos y colgándolos acá. Seguíme en la red social de tu preferencia para estar al tanto. Mientras tanto leé Hualixto, volvé a leerlo, escribíme algo lindo, pasále la info a tus amigos y a tu vieja.</p>
+							</div>
+						</div>
+
+						<div class="texto4" id="id-texto4-badabum">
+							<div class="badabum-ebook">
+								<p>Badabumberos está en los últimos procesos de corrección. Cuando quede pipí cucú voy a lanzar los ebooks en todos los formatos que te puedas imaginar. Seguíme en la red social de tu preferencia para estar al tanto. Mientras tanto leé Hualixto, releélo, escribíme algo lindo, pasále la info a tus amigos, a tu vieja, al vecino de al lado.</p>
+								<!--
+								<h4>Hay ebooks para todos, leé atenti y fijáte cuál te gusta más. Es todo gratis así que si le pifiás, no te preocupes.</h4>
+								<ul class="ul-opciones-ebook">
+									<li><button class="descargar-ebook"><i class="fas fa-laptop"></i></button>
+										<p>Esta es para los que quieren leer desde su computadora o tablet y tienen miedo a descargarse un virus.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button>
+										<p>Esto es lo mismo, pero te lo descargás y listo. No, no tiene virus.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-mobile-alt"></i></button>
+										<p>Esta opción es para los que quieren leerlo online desde su celular.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button>
+										<p>Este es un simple .pdf adaptado a pantallas de celulares y dispositivos chiquitos.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-tablet-alt"></i></button>
+										<p>Este es para los que tienen e-readers que NO sean Kindle, onda un Kobo.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fab fa-amazon"></i></button>
+										<p>Este te conviene si caíste en manos de Jeff Bezzos y tenés un Kindle.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="far fa-file-alt"></i></button>
+										<p>Este es un .txt, para gente rara. Onda no sé quién puede querer esto, pero soy re copado y lo pongo igual.</p>
+									</li>
+								</ul>
+								-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="heliantua-principal">
+			<div class="libro-cerrado" id="heliantua-cerrado">
+				<img class="img banner" src="Imagenes/Heliantua%20banner.jpg" onclick="abrirHeliantua();">
+			</div>
+			<div class="libro-abierto" id="heliantua-abierto">
+				<div class="columna1">
+					<div class="portada-contenedor">
+						<img class="img portada" src="Imagenes/Heliantua%20WEB%20PROX.jpg" onclick="cerrarHeliantua();">
+						<div class="botones-contenedor">
+							<ul class="botonera">
+								<li><button class="heliantua-boton" onclick="verTexto1Heliantua()"><a href="javascript:void(0);">info</a></button></li>
+								<li><button class="heliantua-boton" onclick="verTexto2Heliantua()"><a href="javascript:void(0);">opinión</a></button></li>
+								<li><button class="heliantua-boton" onclick="verTexto3Heliantua()"><a href="javascript:void(0);">audiolibro</a></button></li>
+								<li><button class="heliantua-boton" onclick="verTexto4Heliantua()"><a href="javascript:void(0);">ebook</a></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="columna2">
+					<div class="textos-contenedor">
+
+						<div class="texto1" id="id-texto1-heliantua">
+							<div class="heliantua-resumen">
+								<p>Buenas, soy <span class="span-nombre-importante">Eduardo</span>, el pibe de la tapa, y lo que tengo en la mano ahí, en ese dibujo, es la única copa de cristal que no habían hecho mierda los inquilinos veraniegos de la casa de Nico, mi mejor amigo.</p>
+								<p>Era febrero del 2002, así que esa copita debía ser una de las pocas cosas no hechas mierda en todo el país. Ese era el contexto en que transcurre <span class="span-nombre-importante">Heliantua</span>. Por si no te acordás te tiro un centro: corralito, crisis, FMI, desempleo galopante, El sodero de mi vida por Canal 13. Pero yo tenía diez años (casi once) y estaba chocho de pasar una semanita en Pinamar.</p>
+								<p>Sólo que, bueno, en la misma manzana había una casa embrujada, y viste que un fantasma es mucho más atractivo que un país desmoronado...</p>
+							</div>
+						</div>
+
+						<div class="texto2" id="id-texto2-heliantua">
+							<div class="heliantua-opinion">
+								<!--
+								<div class="opiniones-display">
+									<div class="opinion3 fade">
+										<h3>- Increíble relato de cómo fue realmente el fin del milenio!</h3>
+										<p>«En Badabumberos se puede ver cómo va madurando Eduardo desde Hualixto y cómo se va volviendo un hijo de puta. Más allá de eso, me divertí mucho con la historia y me trajo nostalgia de Dragon Ball y los dinovo. ¿Por qué no existen más los dinovo che?»</p>
+										<p class="opinion-firma">Nadie, porque nadie me quiere</p>
+									</div>
+									<div class="opinion3 fade">
+										<h3>- El nuevo Martín Fierro, el nuevo Harry Potter, el nuevo Jack Reacher ha llegado al país!</h3>
+										<p>«Considero que <span class="span-nombre-importante">Badabumberos</span> es la segunda obra en la narración argentina contemporánea de ficción que, con un vocabulario accesible y coloquial y constante humor se aproxima a las temáticas que realmente importan en la sociedad actual, como las batallas de cartas Pókemon y ese tipo de cosas...»</p>
+										<p class="opinion-firma">Rafa, el autor</p>
+									</div>
+									<div class="opinion3 fade">
+										<h3>No hay suficientes lectores como para mostrar opiniones verdaderas, copate y, apenas salga el libro, ¡dejá la tuya!</h3>
+										<p>Como sugerencia siempre recordamos ser buena onda y no bardearla. Dame amor, dale.</p>
+										<!--<p class="opinion-firma">Rafa, el autor</p>-->
+								<!--</div>
+						</div>
+						<br>
+						<div class="opinion-puntitos">
+							<a class="opinion-anterior" onclick="plusSlides(-1, 1)">&#10094;</a>
+							<a class="opinion-siguiente" onclick="plusSlides(1, 1)">&#10095;</a>
+						</div>
+						<br>  --->
+								<!---
+								<div class="opinion-form-contenedor">
+									<form class="formulario-opinion">
+										<h3>Dejame tu comentario</h3>
+										<input class="formulario-nombre" type="text" name="nombre" placeholder="tu nombre">
+										<br>
+										<input class="formulario-email" type="email" name="email" placeholder="tu email, juro no mandar spam">
+										<br>
+										<textarea class="formulario-dejar-opinion" name="opinion-lector" placeholder="decime cuánto te gustó" maxlength="500"></textarea>
+										<br>
+										<input class="enviar-opinion" type="submit" value="enviar">
+									</form>
+								</div>
+								--->
+
+							</div>
+						</div>
+
+						<div class="texto3" id="id-texto3-heliantua">
+							<div class="heliantua-audiolibro">
+								<p>Heliantua ya está escrito y pasará a la etapa de correción apenas pueda. Seguíme en la red social de tu preferencia para estar al tanto. Mientras tanto leéte Hualixto, volvé a leerlo, escribíme algo lindo, pasále la info a tus amigos y a tu vieja.</p>
+							</div>
+						</div>
+
+						<div class="texto4" id="id-texto4-heliantua">
+							<div class="heliantua-ebook">
+								<p>Heliantua ya está escrito y pasará a la etapa de correción apenas pueda. Seguíme en la red social de tu preferencia para estar al tanto. Mientras tanto leé Hualixto, releélo, escribíme algo lindo, pasále la info a tus amigos, a tu vieja, al vecino de al lado.</p>
+								<!--
+								<h4>Hay ebooks para todos, leé atenti y fijáte cuál te gusta más. Es todo gratis así que si le pifiás, no te preocupes.</h4>
+								<ul class="ul-opciones-ebook">
+									<li><button class="descargar-ebook"><i class="fas fa-laptop"></i></button>
+										<p>Esta es para los que quieren leer desde su computadora o tablet y tienen miedo a descargarse un virus.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button>
+										<p>Esto es lo mismo, pero te lo descargás y listo. No, no tiene virus.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-mobile-alt"></i></button>
+										<p>Esta opción es para los que quieren leerlo online desde su celular.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-file-pdf"></i></button>
+										<p>Este es un simple .pdf adaptado a pantallas de celulares y dispositivos chiquitos.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fas fa-tablet-alt"></i></button>
+										<p>Este es para los que tienen e-readers que NO sean Kindle, onda un Kobo.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="fab fa-amazon"></i></button>
+										<p>Este te conviene si caíste en manos de Jeff Bezzos y tenés un Kindle.</p>
+									</li>
+									<li><button class="descargar-ebook"><i class="far fa-file-alt"></i></button>
+										<p>Este es un .txt, para gente rara. Onda no sé quién puede querer esto, pero soy re copado y lo pongo igual.</p>
+									</li>
+								</ul>
+								-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+	</div>
+
+
+	<div class="bio-contenedor" id="bio-contenedor" onclick="abrirBio();">
+		<div class="foto-bio-contenedor">
+			<img class="foto-bio" src="Imagenes/foto-bio.jpg">
+		</div>
+		<div class="bio-texto-contenedor">
+			<div class="bio-texto">
+				<h4>Rafael Núñez R.</h4>
+				<p>Soy de Buenos Aires. De chiquito quería ser paleontólogo, después me copó escribir. Me recibí de profesor de Artes Visuales y me fui de viaje. Desde marzo del 2014 ando yirando por ahí, mientras tanto escribo.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="footer">
+		<div class="footer-texto">
+			<p><span class="span-nombre-importante">© Rafael Núñez</span></p>
+			<p>● textos, </p>
+			<p>ilustraciones, </p>
+			<p>diseño web, </p>
+			<p>locución </p>
+			<p>y la mar en coche: </p>
+			<p>Rafael Núñez</p>
+		</div>
+		<div class="footer-icons">
+			<a href="https://www.facebook.com/Buenas-soy-Eduardo-102414251516745" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.instagram.com/buenassoyeduardo/" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://twitter.com/buenasoyeduardo" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a href="https://issuu.com/buenassoyeduardo" target="_blank"><img class="fab-issuu" src="Imagenes/pngwing.com.png"></a>
+			<a href="" target="_blank"><i class="fab fa-spotify"></i></a>
+		</div>
+
+	</footer>
+
+
+
+	<script type="text/javascript" src="buenassoyeduardo.js"></script>
+
+</body>
+
+</html>

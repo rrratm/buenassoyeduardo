@@ -1,0 +1,46 @@
+.libro-principal
+	display: block
+	width: 100%
+	+mar-pad(0, 0)
+	&::after
+		display: block
+		clear: both
+		content: ""
+
+.libro-cerrado
+	display: block
+	width: 100%
+	text-align: center
+	.img
+		margin: auto
+
+.libro-abierto
+	display: flex
+	flex-direction: row
+
+.columna1
+	width: 50%
+	order: 1
+	z-index: 2
+	
+.portada-contenedor
+	width: 350px
+	max-width: 350px
+	display: block
+	text-align: center
+	float: right
+	margin-right: -175px
+
+.columna2
+	width: 50%
+	order: 2
+	z-index: 1
+	//overflow: hidden
+
+.textos-contenedor
+	max-width: 460px
+	display: block
+	float: left
+	+mar-pad(0 0 0 175px, 0 0 0 10px)
+	height: 585px
+	overflow-y: visible

@@ -1,0 +1,173 @@
+#boton-comprar
+	z-index: 3
+	position: fixed
+	top: -300px
+	left: -175px
+	width: 350px
+	height: 350px
+	border-radius: 50%
+	background-color: $color-comprar1
+	color: $color-fondo
+	cursor: pointer
+	font-size: 20px
+	font-weight: 700
+	transition: 0.1s ease
+	line-height: 15px
+	font-family: 'Pacifico', cursive
+	opacity: .9
+	&:hover
+		width: 360px
+		height: 355px
+		background-color: $color-comprar2
+		color: $color-texto
+		text-shadow: 0 5px 12px $color-fondo
+		box-shadow: 0 5px 12px $color-fondo
+		opacity: 1
+		p
+			font-size: 24px
+			line-height: 20px
+
+.quiero-comprar
+	-webkit-transform: rotate(-9deg)
+	-moz-transform: rotate(-9deg)
+	-o-transform: rotate(-9deg)
+	transform: rotate(-9deg)
+	position: fixed
+	top: 4px
+	left: 4px
+	text-align: right
+	font-size: 20px
+
+/////////////////PANEL/////////////
+#comprar-contenedor
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background-color: rgba(0,0,0,.3)
+	opacity: 1
+	z-index: 3
+	display: none
+	font_weight: 100
+	font-size: 16px
+
+.comprar-panel
+	position: fixed
+	top: 10px
+	bottom: 10px
+	left: 10px
+	right: 10px
+	background-color: $color-fondo
+	z-index: 4
+	border-radius: 15px
+	box-shadow: 0 0 10px 2px $color-texto
+	padding: 10px
+
+.cerrar-panel
+	position: fixed
+	cursor: pointer
+	top: 15px
+	right: 15px
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	background-color: $color-gris-oscuro
+	color: $color-texto
+	opacity: 0.75
+	text-align: center
+	vertical-align: certer
+	font-size: 14px
+	z-index: 5
+	+mar-pad(10px,0 3px)
+	&:hover
+		background-color: $color-gris-claro
+		color: $color-fondo
+
+.comprar-panel-bis
+	+mar-pad(0,0)
+	display: block
+	height: 100%
+	overflow-x: hidden
+	overflow-y: auto
+
+.comprar-columnas
+	display: flex
+	width: 100%
+
+.portadas-chiquitas
+	width: 270px
+	display: flex
+	flex-wrap: wrap
+	text-align: center
+	+mar-pad(auto, 5px 0 0)
+
+.img-miniaturas
+	width: 90px
+	margin: auto
+
+.columna1-comprar, .columna2-comprar
+	width: 50%
+
+.comprar-textos
+	+mar-pad(0,7px 15px 0)
+
+.comp-a
+	cursor: pointer
+	text-decoration: none
+	&:visited
+		color: $color-texto
+
+.form-comprar
+	+mar-pad(0,0)
+	display: block
+	width: 100%
+	input
+		+mar-pad(8px 0 0, 4px)
+		width: 96%
+		max-width: 400px
+		border-radius: 4px
+		background-color: $color-gris-oscuro
+		color: $color-texto
+		font-family: 'Heebo', serif
+		font-size: 15px
+		text-overflow: clip
+		border: 0
+		&::placeholder
+			color: $color-gris-claro
+			font-weight: 100
+	#compCheck1
+		width: 40px
+		margin: 20px 0 10px -12px
+	#compCheck2
+		width: 40px
+		margin: 10px 0 20px -12px
+	.enviar-comprar
+		margin: 6px 0 0
+		height: 30px
+		width: 220px
+		font-size: 16px
+		background-color: $color-gris-oscuro
+		&:hover
+			cursor: pointer
+			background-color: #636363
+
+.meta
+	width: 100%
+	display: flex
+	+mar-pad(0, 5px 0px)
+	.meta-ok
+		background-color: darken($color-bada2,20%)
+		width: 0.5%
+		height: 30px
+		border-radius: 4px 0 0 4px
+		+mar-pad(15px 0 0 15px, 4px 0 0)
+	.meta-nook
+		background-color: darken($color-bada1,10%)
+		width: 99.5%
+		height: 30px
+		border-radius: 0 4px 4px 0
+		+mar-pad(15px 15px 0 0, 4px 2px 0 10px)
+
+.comprar-textos-pie
+	text-align: center
+	padding: 0 10px

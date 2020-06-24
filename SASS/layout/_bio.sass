@@ -1,0 +1,56 @@
+.bio-contenedor
+	+mar-pad(20px auto,0)
+	background-color: $color-gris-oscuro
+	border: 25px solid $color-comprar1
+	width: 170px
+	height: 170px
+	border-radius: 50%
+	transition: .3s ease-in-out
+	cursor: pointer
+	&:hover
+		border: 25px solid $color-bada1
+		background-color: $color-bada1
+		.foto-bio
+			opacity: 1
+			transform: rotate(-30deg) scale(1.01)
+
+.foto-bio
+	+mar-pad(0,0)
+	width: 120px
+	height: 120px
+	border-radius: 50%
+	transform: rotate(-10deg)
+	opacity: 0.7
+	transition: .3s ease-in-out
+
+.bio-texto-contenedor
+	opacity: 0
+	transition: 0
+	overflow: hidden
+	height: 0
+
+
+////ABIERTO DESPUES DE JS
+.bio-contenedor.abierta
+	+mar-pad(20px auto,0)
+	display: flex
+	width: 520px
+	border: 25px solid $color-bada1
+	background-color: $color-bada1
+	border-radius: 90px 15px 15px 90px
+	.foto-bio
+		transform: rotate(-30deg) scale(1.01)
+		opacity: 1
+	.bio-texto-contenedor
+		transition: opacity 1s ease-in, height 0.01s
+		width: 370px
+		height: 200px
+		display: inline
+		opacity: 1
+		+mar-pad(0 0 0 25px,0)
+		h4
+			+mar-pad(-5px 0 0,0)
+			font-weight: bold
+		p
+			+mar-pad(0,0)
+			font-size: 16px

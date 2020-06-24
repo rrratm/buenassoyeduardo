@@ -1,0 +1,130 @@
+$pantalla-xl: 1300px
+$pantalla-l: 920px
+$pantalla-m: 699px
+$pantalla-s: 400px
+
+//PANTALLAS GRANDES TIPO MAC
+@media screen and (min-width: $pantalla-xl)
+	.img
+		width: 450px
+	.portada-contenedor
+		width: 450px
+		margin-right: -125px
+	.textos-contenedor
+		+mar-pad(0 0 0 225px, 0 0 0 10px)
+		height: 700px
+	.botones-contenedor
+		width: 450px
+		li
+			button
+				+mar-pad(5px 0 10px, 3px)
+				height: 30px
+		
+//PANTALLAS MEDIANAS, TABLETS
+@media screen and (max-width: $pantalla-l)
+	.columna1-comprar, .columna2-comprar
+		width: 100%
+	.img.banner
+		+mar-pad(0 auto 5px, 0)
+	.columna1
+		width: 350px
+	.portada-contenedor
+		+mar-pad(0,0)
+	.img.portada
+		+mar-pad(0, 0)
+	.columna2
+		width: auto
+	.textos-contenedor
+		+mar-pad(0, 0 0 0 10px)
+	.opiniones-display
+		height: 270px
+
+
+//PANTALLAS DE CELULAR
+@media screen and (max-width: $pantalla-m)
+	.comprar-columnas
+		display: block
+	.columna1-comprar, .columna2-comprar
+		width: 100%
+	.libro-principal
+		min-width: 375px
+	.libro-cerrado
+		display: block
+		.img.banner
+			+mar-pad(0 auto 5px, 0)
+	.libro-abierto
+		display: none
+		flex-direction: column
+		align-items: center
+		overflow: hidden
+	.textos-contenedor
+		height: 100%
+		margin-bottom: 20px
+	.opiniones-display
+		height: 250px
+	.bio-contenedor.abierta
+		height: auto
+		width: 100%
+		//max-width: 520px
+		.bio-texto-contenedor
+			height: auto
+
+
+	
+//CELULARES MEGA CHIQUITOS	
+@media screen and (max-width: $pantalla-s)
+	.libro-principal
+		width: 100%
+		overflow-x: hidden
+	.libro-cerrado
+		width: 100%
+		+mar-pad(0,0)
+		text-align: center
+	.img.banner
+		width: 300px
+		text-align: center	
+	.libro-abierto
+		+mar-pad(0,0)
+		width: 100%
+		overflow-x: hidden
+	.columna1
+		width: 100%
+		overflow-x: hidden
+		+mar-pad(0,0)
+	.portada-contenedor
+		+mar-pad(0,0)
+		text-align: center
+		width: 100%
+	.img.portada
+		text-align: center
+		width: 300px
+	.botones-contenedor
+		width: 300px
+	.botonera
+		width: 100%
+		display: block
+		text-align: center
+		li
+			width: 300px
+			button
+				+mar-pad(10,0)
+				width: 100%
+	.columna2
+		+mar-pad(0,0)
+	.textos-contenedor
+		+mar-pad(0,0 3px)
+		width: 100%
+	.opiniones-display
+		height: 290px
+	.opinion-form-contenedor
+		margin-bottom: 15px
+	.bio-contenedor.abierta
+		height: auto
+		width: 100%
+		.bio-texto-contenedor
+			height: auto
+	.footer
+		width: 100%
+	.footer-icons
+		width: 60%
+		display: flex

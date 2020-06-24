@@ -1,0 +1,87 @@
+.opinion-firma
+	float: right
+	font-weight: 650
+
+.formulario-opinion
+	display: block
+	width: 100%
+	input
+		+mar-pad(8px 0 0, 4px)
+		width: 96%
+		max-width: 390px
+		border-radius: 4px
+		background-color: $color-gris-oscuro
+		color: $color-texto
+		font-family: 'Nunito', serif
+		font-size: 15px
+		text-overflow: clip
+		border: 0
+		&::placeholder
+			color: $color-gris-claro
+			font-weight: 100
+	textarea
+		@extend input
+		height: 80px
+		resize: none
+		overflox: auto
+	.enviar-opinion
+		margin: 6px 0 0
+		height: 30px
+		width: 50%
+		font-size: 16px
+		background-color: $color-gris-oscuro
+		&:hover
+			cursor: pointer
+			background-color: #636363
+
+.texto2
+	display: none
+
+
+
+.opiniones-display
+	width: 100%
+	position: relative
+	margin: auto
+	height: 235px
+
+.opinion1, .opinion2
+	display: none
+
+.opinion-anterior, .opinion-siguiente
+	cursor: pointer
+	position: relative
+	padding: 3px 13px 3px 9px
+	color: $color-gris-claro
+	font-weight: bold
+	font-size: 18px
+	transition: 0.3s ease
+	border-radius: 50%
+	user-select: none
+	&:hover
+		background-color: $color-gris-oscuro
+		color: $color-fondo
+
+.opinion-siguiente
+	padding: 3px 10px 3px 12px
+	border-radius: 50%
+
+
+
+.fade
+	-webkit-animation-name: fade
+	-webkit-animation-duration: .5s
+	animation-name: fade
+	animation-duration: .5s
+
+@-webkit-keyframes "fade"
+	from
+		opacity: .4
+	to
+		opacity: 1
+	
+@keyframes "fade"
+	from
+		opacity: .4
+	to
+		opacity: 1
